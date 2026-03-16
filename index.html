@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta tag ESSENCIAL para o site funcionar em mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organização Mundo Verde</title>
+    <!-- Conectando o CSS e o JavaScript (criaremos depois) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Para usar emojis de forma consistente -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO COM MENU (fixo no topo) -->
+    <header>
+        <h1 class="logo">🌿 ORGANIZAÇÃO MUNDO VERDE</h1>
+        <!-- Menu de navegação que vira um seletor de abas (slides) -->
+        <nav class="menu-abas">
+            <button class="aba-btn ativa" data-aba="1">🌱 1</button>
+            <button class="aba-btn" data-aba="2">💧 2</button>
+            <button class="aba-btn" data-aba="3">🌳 3</button>
+            <button class="aba-btn" data-aba="4">♻️ 4</button>
+            <button class="aba-btn" data-aba="5">📊 5</button>
+            <button class="aba-btn" data-aba="6">💡 6</button>
+            <button class="aba-btn" data-aba="7">🤝 7</button>
+            <button class="aba-btn" data-aba="8">📰 8</button>
+            <button class="aba-btn" data-aba="9">💬 9</button>
+            <button class="aba-btn" data-aba="10">⭐ 10</button>
+            <button class="aba-btn" data-aba="11">🔊 11</button>
+        </nav>
+    </header>
+
+    <!-- ÁREA PRINCIPAL: CADA ABA É UM "SLIDE" -->
+    <main>
+        <!-- SLIDE 1: Introdução e Curiosidades -->
+        <section class="aba-conteudo ativa" id="aba-1">
+            <h2>🌎 Futuro Sustentável: O Equilíbrio Começa Agora</h2>
+            <p>Conscientizar é o primeiro passo para mudar. A produção e o meio ambiente podem (e devem) andar juntos.</p>
+            <img src="13770786-ecologia-natureza-sustentavel-conceito-de-conversa-do-planeta-maos-humanas-segurando-o-planeta-terra-com-planta-de-crescimento-sol-e-chuva-ao-redor-cuidando-ilustracaoial-gratis-vetor.jpg" alt="Mundo sustentável" class="img-slide">
+            
+            <!-- BOTÃO DE CURIOSIDADES COM SOM -->
+            <div class="curiosidade-box">
+                <h3>🌱 Curiosidade do Dia</h3>
+                <p id="texto-curiosidade">Clique no botão para descobrir algo novo!</p>
+                <button id="botao-curiosidade">🔮 Descobrir Curiosidade</button>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: Exemplo de gráfico e dados (preencha com seus dados) -->
+        <section class="aba-conteudo" id="aba-2">
+            <h2>📈 Produção x Impacto Ambiental</h2>
+            <p>Gráfico mostrando a relação entre crescimento industrial e emissão de CO₂.</p>
+            <!-- Imagem representando um gráfico -->
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gráfico de sustentabilidade" class="img-slide">
+            <ul>
+                <li><strong>2000-2010:</strong> Aumento de 30% na produção.</li>
+                <li><strong>2010-2020:</strong> Aumento de 15% com políticas verdes.</li>
+                <li><strong>Meta 2030:</strong> Reduzir emissões em 50%.</li>
+            </ul>
+        </section>
+
+        <!-- SLIDE 3: Ações práticas -->
+        <section class="aba-conteudo" id="aba-3">
+            <h2>🌳 Pequenas Ações, Grandes Mudanças</h2>
+            <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plantando árvore" class="img-slide">
+            <ul>
+                <li>♻️ Recicle e composte.</li>
+                <li>💡 Economize energia (troque lâmpadas).</li>
+                <li>🚲 Use transporte sustentável.</li>
+                <li>🛒 Prefira produtos locais e orgânicos.</li>
+            </ul>
+        </section>
+
+        <!-- SLIDE 4: Inovações -->
+        <section class="aba-conteudo" id="aba-4">
+            <h2>💡 Tecnologias Verdes</h2>
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Energia solar" class="img-slide">
+            <p>Energia solar, carros elétricos e embalagens biodegradáveis são exemplos de como a inovação ajuda o planeta.</p>
+        </section>
+
+        <!-- SLIDE 5: Desafios -->
+        <section class="aba-conteudo" id="aba-5">
+            <h2>⚠️ Desafios Atuais</h2>
+            <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9f67?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Poluição" class="img-slide">
+            <ul>
+                <li>Descarte incorreto de lixo.</li>
+                <li>Desmatamento ilegal.</li>
+                <li>Consumo excessivo de recursos.</li>
+            </ul>
+        </section>
+
+        <!-- SLIDE 6: O papel das empresas -->
+        <section class="aba-conteudo" id="aba-6">
+            <h2>🏭 Responsabilidade Corporativa</h2>
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Empresa sustentável" class="img-slide">
+            <p>Empresas devem adotar práticas ESG (Ambiental, Social e Governança) para um futuro melhor.</p>
+        </section>
+
+        <!-- SLIDE 7: Como você pode ajudar (com formulário de inscrição no site) -->
+        <section class="aba-conteudo" id="aba-7">
+            <h2>🤝 Faça Parte</h2>
+            <p>Inscreva-se no site para receber dicas semanais:</p>
+            <!-- Formulário 1: Inscrição no site (simulado) -->
+            <form class="form-inscricao" id="form-site">
+                <input type="email" placeholder="Seu melhor e-mail" required>
+                <button type="submit">Quero me inscrever 🌿</button>
+                <p class="msg-sucesso" style="display: none;">Inscrição feita!</p>
+            </form>
+        </section>
+
+        <!-- SLIDE 8: Jornal Sustentável (formulário de inscrição no jornal) -->
+        <section class="aba-conteudo" id="aba-8">
+            <h2>📰 Jornal Mundo Verde</h2>
+            <p>Assine nosso jornal digital gratuito:</p>
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jornal" class="img-slide">
+            <form class="form-inscricao" id="form-jornal">
+                <input type="email" placeholder="Digite seu e-mail">
+                <button type="submit">Assinar Jornal 📬</button>
+                <p class="msg-sucesso" style="display: none;">Assinatura confirmada!</p>
+            </form>
+        </section>
+
+        <!-- SLIDE 9: Deixe seu comentário -->
+        <section class="aba-conteudo" id="aba-9">
+            <h2>💬 Sua Opinião é Importante</h2>
+            <p>Compartilhe sua ideia sobre sustentabilidade:</p>
+            <form class="form-comentario" id="form-comentario">
+                <textarea placeholder="Escreva seu comentário..." rows="4"></textarea>
+                <button type="submit">Enviar Comentário ✍️</button>
+                <p class="msg-sucesso" style="display: none;">Obrigada! Comentário enviado.</p>
+            </form>
+        </section>
+
+        <!-- SLIDE 10: Avaliação com Emojis -->
+        <section class="aba-conteudo" id="aba-10">
+            <h2>⭐ Avalie o Site</h2>
+            <p>De 1 a 10, como você avalia nosso conteúdo?</p>
+            <div class="avaliacao-emojis" id="avaliacao">
+                <!-- Emojis de 1 a 10, usaremos números com emojis -->
+                <span data-nota="1">😡 1</span>
+                <span data-nota="2">🙁 2</span>
+                <span data-nota="3">😐 3</span>
+                <span data-nota="4">🙂 4</span>
+                <span data-nota="5">😊 5</span>
+                <span data-nota="6">😋 6</span>
+                <span data-nota="7">😍 7</span>
+                <span data-nota="8">🤩 8</span>
+                <span data-nota="9">🥳 9</span>
+                <span data-nota="10">💚 10</span>
+            </div>
+            <p id="resultado-avaliacao" style="font-weight: bold;"></p>
+        </section>
+
+        <!-- SLIDE 1 ao 11: Efeitos e sons (interação) -->
+        <section class="aba-conteudo" id="aba-11">
+            <h2>🔊 Efeitos Sonoros</h2>
+            <p>Clique nos botões para ouvir sons (que tal um passarinho ou água?).</p>
+            <div class="botoes-som">
+                <button id="som-passaro">🐦 Passarinho</button>
+                <button id="som-agua">💧 Água</button>
+                <button id="som-reciclar">♻️ Reciclar</button>
+            </div>
+            <p>Ouça e imagine um mundo mais verde!</p>
+        </section>
+    </main>
+
+    <!-- Rodapé simples -->
+    <footer>
+        <p>Feito por Daniany Lais dos Santos - 2º Ano EM 🌱</p>
+    </footer>
+
+    <!-- Conectando o JavaScript (criaremos a seguir) -->
+    <script src="script.js"></script>
+</body>
+</html>

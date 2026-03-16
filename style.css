@@ -1,0 +1,269 @@
+/* === RESET BÁSICO E FONTES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 248, 240); /* cor de fundo suave */
+    color: rgb(19, 29, 79); /* cor escura para texto */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* === CABEÇALHO COM MENU (suas cores) === */
+header {
+    background-color: rgb(35, 61, 77); /* cor principal do menu */
+    color: rgb(245, 251, 230); /* texto claro */
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: rgb(254, 127, 45); /* laranja de destaque */
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.menu-abas {
+    display: flex;
+    flex-wrap: wrap; /* para quebrar linha no mobile */
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.aba-btn {
+    background-color: rgb(63, 84, 104); /* tom médio */
+    border: none;
+    color: rgb(245, 251, 230);
+    padding: 0.6rem 1rem;
+    border-radius: 30px; /* bem arredondado */
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.aba-btn:hover {
+    background-color: rgb(254, 127, 45); /* laranja ao passar o mouse */
+    transform: scale(1.05);
+}
+
+.aba-btn.ativa {
+    background-color: rgb(254, 127, 45); /* aba ativa */
+    color: rgb(19, 29, 79);
+    box-shadow: 0 0 15px rgb(254, 127, 45);
+}
+
+/* === ÁREA DE CONTEÚDO (ABAS) === */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.aba-conteudo {
+    display: none; /* escondido por padrão */
+    animation: fadeEffect 0.5s; /* efeito suave ao trocar */
+    background-color: white;
+    padding: 2rem;
+    border-radius: 30px 10px 30px 10px; /* formato diferente */
+    box-shadow: 20px 20px 0px rgb(192, 133, 82); /* sombra colorida e criativa */
+    border: 3px solid rgb(149, 76, 46);
+    margin-bottom: 2rem;
+}
+
+.aba-conteudo.ativa {
+    display: block; /* mostra a aba ativa */
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0.5; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* === TÍTULOS E TEXTOS (usando as cores) === */
+h2 {
+    color: rgb(8, 65, 119); /* azul forte */
+    border-left: 10px solid rgb(254, 127, 45);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+h3 {
+    color: rgb(37, 77, 112);
+    margin: 1rem 0;
+}
+
+p, li {
+    color: rgb(75, 46, 43); /* marrom escuro */
+    font-size: 1.1rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 1.5rem 0;
+}
+
+li {
+    background: rgb(245, 251, 230); /* fundo clarinho */
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border-radius: 20px;
+    border-left: 8px solid rgb(33, 94, 97); /* detalhe verde */
+    font-weight: 500;
+}
+
+/* === IMAGENS (sempre responsivas) === */
+.img-slide {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 30px 5px 30px 5px;
+    border: 5px solid rgb(192, 133, 82);
+    box-shadow: 10px 10px 0 rgb(140, 90, 60);
+}
+
+/* === BOTÕES E FORMULÁRIOS === */
+button, .form-inscricao button, .form-comentario button, #botao-curiosidade {
+    background-color: rgb(35, 61, 77);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid rgb(254, 127, 45);
+    margin: 0.5rem 0.2rem;
+}
+
+button:hover, .form-inscricao button:hover, #botao-curiosidade:hover {
+    background-color: rgb(254, 127, 45);
+    color: rgb(19, 29, 79);
+    transform: scale(1.05);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 3px solid rgb(149, 76, 46);
+    border-radius: 30px;
+    font-size: 1rem;
+    background-color: rgb(245, 251, 230);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: rgb(254, 127, 45);
+    box-shadow: 0 0 15px rgb(254, 127, 45);
+}
+
+/* === AVALIAÇÃO COM EMOJIS === */
+.avaliacao-emojis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.avaliacao-emojis span {
+    font-size: 1.8rem;
+    background-color: rgb(63, 84, 104);
+    padding: 0.8rem;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: white;
+    border: 3px solid transparent;
+    user-select: none;
+}
+
+.avaliacao-emojis span:hover {
+    transform: scale(1.3);
+    background-color: rgb(254, 127, 45);
+    border-color: rgb(19, 29, 79);
+}
+
+.avaliacao-emojis span.selecionado {
+    background-color: rgb(254, 127, 45);
+    border-color: rgb(19, 29, 79);
+    box-shadow: 0 0 20px rgb(254, 127, 45);
+}
+
+#resultado-avaliacao {
+    color: rgb(8, 65, 119);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* === BOTÕES DE SOM === */
+.botoes-som {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.botoes-som button {
+    background-color: rgb(33, 94, 97);
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 100px;
+    border: 4px solid rgb(254, 127, 45);
+}
+
+/* === RODAPÉ === */
+footer {
+    background-color: rgb(19, 29, 79);
+    color: rgb(245, 251, 230);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* === RESPONSIVIDADE (mobile) === */
+@media (max-width: 768px) {
+    .menu-abas {
+        flex-wrap: nowrap;
+        overflow-x: auto; /* menu vira scroll horizontal no celular */
+        justify-content: flex-start;
+        padding-bottom: 0.5rem;
+    }
+    
+    .aba-btn {
+        flex: 0 0 auto;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    .aba-conteudo {
+        padding: 1rem;
+    }
+    
+    .avaliacao-emojis span {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+}
